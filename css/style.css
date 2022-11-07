@@ -112,7 +112,6 @@ nav{
     padding-top: 5%;
     left: .5px;
     display: block;
-    height: fit-content;
     width: 200px;
     height: 100%;
     top: 0px;
@@ -137,7 +136,7 @@ nav{
     width: 577px;
     left: 50%;
 }
-.info h1 {
+.info h1, h5 {
     color: rgb(243, 237, 230);
 }
 .personal p{
@@ -208,16 +207,14 @@ nav{
 .objective{
     top: 0px;
     margin-left: 250px;
-    height: max-content;
     color:  rgb(216, 212, 214);
-    height: max-content;
-    padding-bottom: 19px;
+    padding: 0;
 }
 .flex-item {
-    width: 60vw;
+    width: 50vw;
     height: 11rem;
     background-color: #3d3d3d;
-    margin: 1em 1em 0 10%;
+    margin: 0.5em 1em 0 1%;
     padding: .5em 0 0 2em;
     border-radius: 50px;
 }
@@ -225,6 +222,9 @@ nav{
     display: flex;
     justify-content: space-around;
     margin: 1rem;
+}
+#Education{
+margin: 0;
 }
 h3 {
     display: block;
@@ -247,17 +247,20 @@ h3 {
     margin-left: 2rem;
 }
 
-.form1{
-    display: flex;
-    width: min-content;
-    align-items: center;
-    left: 55%;
-    top: 10%;
+.Right-center{
+    width: 84vw;
+    height: auto;
     position: relative;
-    justify-content: center;
+    color:rgb(216, 212, 214);
+    z-index: -1;
 }
 
-/* 
+.Boxes{
+    margin-left: 18%;
+    margin-top: 10%;
+}
+
+
 @media screen and (max-width: 629px) {
     
     body{
@@ -330,6 +333,7 @@ h3 {
     nav{
         z-index: -1;
         height: 100%;
+        display: none;
     }
     .info.p,h1{
         font-size: 25px;
@@ -342,8 +346,39 @@ h3 {
         width: 35%;
         z-index: 3;
         position: fixed;
-        top: 18%;
-        left: 60%;
+        left: 0;
+        bottom: 0;
     }
     
-} */
+    .personal #txt{
+        position: fixed;
+        left: 0%;
+        width: 255px;
+        margin: 0%;
+    }
+    .info{
+        margin-top: 5%;
+        position: fixed;
+        top: 10%;
+        left: 0;
+        width: 450px;
+    }
+
+    .card-view{
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        display: flex;
+        flex-direction: row;
+        scroll-behavior: smooth;
+    }
+    .card{
+        z-index: 1;
+        border-radius: 25% 25% 25% 25%;
+        width: 150px;
+        height: max-content;
+        margin-bottom: 2em;
+        margin-left: 60%;
+
+    }
+}
